@@ -1,0 +1,125 @@
+<ion-header no-border>
+    <ion-toolbar mode="ios" class="ion-no-padding">
+        <img (click)="goBack()" src="../../../assets/b.png">
+        <ion-title>Appointment</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content mode="ios">
+    <ion-grid class="ion-no-padding">
+        <ion-row class="ion-padding">
+            <ion-col size="12">
+                <ion-segment (ionChange)="segmentChanged2($event)">
+                    <ion-segment-button mode="ios" value="up" checked>
+                        Upcoming
+                    </ion-segment-button>
+                    <ion-segment-button mode="ios" value="pa">
+                        Past
+                    </ion-segment-button>
+                </ion-segment>
+            </ion-col>
+        </ion-row>
+
+        <div *ngIf="avtiveSegmentt == 'up'">
+            <ion-row *ngFor="let p of Upcoming" class="ion-padding-start ion-padding-end ion-margin-bottom">
+                <ion-col size="12">
+                    <div class="apoin">
+                        <ion-item class="ion-no-padding" lines="none">
+                            <div class="pad">
+                                <img src="{{p.img}}" height="59" width="59">
+                                <div class="textarea">
+                                    <ion-text class="title">{{p.head}}</ion-text><br>
+                                    <ion-text class="address">{{p.addres}}</ion-text><br>
+                                    <ion-text class="date">{{p.date}}</ion-text><br>
+                                </div>
+                            </div>
+                        </ion-item>
+                        <hr>
+                        <ion-row class="ion-padding">
+                            <ion-col size="3.5">
+                                <ion-text class="maintitle">Services : </ion-text>
+                            </ion-col>
+                            <ion-col size="6.5">
+                                <ion-text class="servicetitle">Pedicure & Manicure</ion-text><br>
+                                <ion-text class="servicetitle">Paraffin Treatment...</ion-text><br>
+                                <ion-text class="servicetitle">Eyebrow</ion-text><br>
+                                <ion-text class="servicetitle">Eyebrow, Upper lip...</ion-text><br>
+                                <ion-text class="servicetitle">Full Arm</ion-text><br>
+                                <ion-text class="servicetitle">Half Leg</ion-text><br>
+                            </ion-col>
+                            <ion-col size="2" class="ion-text-end">
+                                <ion-text class="price">($15)</ion-text><br>
+                                <ion-text class="price">($18)</ion-text><br>
+                                <ion-text class="price">($05)</ion-text><br>
+                                <ion-text class="price">($12)</ion-text><br>
+                                <ion-text class="price">($25)</ion-text><br>
+                                <ion-text class="price">($22)</ion-text><br>
+                            </ion-col>
+                        </ion-row>
+                        <ion-row class="ion-padding-start ion-padding-end">
+                            <ion-col size="6">
+                                <ion-text class="totaltitle">Total : </ion-text>
+                            </ion-col>
+                            <ion-col size="6" class="ion-text-end">
+                                <ion-text class="totalprice">$99.00</ion-text>
+                            </ion-col>
+                        </ion-row>
+                    </div>
+                </ion-col>
+            </ion-row>
+        </div>
+
+        <div *ngIf="avtiveSegmentt == 'pa'">
+            <ion-row *ngFor="let p of pastBooking" class="ion-padding-start ion-padding-end ion-margin-bottom">
+                <ion-col size="12">
+                    <div class="apoin">
+                        <ion-item class="ion-no-padding" lines="none">
+
+                            <div class="pad">
+                                <img src="{{p.img}}" height="59" width="59">
+                                <div class="textarea">
+                                    <ion-text class="title">{{p.head}}</ion-text><br>
+                                    <ion-text class="address">{{p.addres}}</ion-text><br>
+                                    <ion-text class="date">{{p.date}}</ion-text><br>
+                                    <ion-button mode="ios" class="com">{{p.com}}</ion-button>
+                                    <ion-button mode="ios" class="bookagain">{{p.book}}</ion-button>
+                                </div>
+                            </div>
+
+                        </ion-item>
+                        <hr>
+                        <ion-row class="ion-padding">
+                            <ion-col size="3.5">
+                                <ion-text class="maintitle">Services : </ion-text>
+                            </ion-col>
+                            <ion-col size="6.5">
+                                <ion-text class="servicetitle">Pedicure & Manicure</ion-text><br>
+                                <ion-text class="servicetitle">Paraffin Treatment...</ion-text><br>
+                                <ion-text class="servicetitle">Eyebrow</ion-text><br>
+                                <ion-text class="servicetitle">Eyebrow, Upper lip...</ion-text><br>
+                                <ion-text class="servicetitle">Full Arm</ion-text><br>
+                                <ion-text class="servicetitle">Half Leg</ion-text><br>
+                            </ion-col>
+                            <ion-col size="2" class="ion-text-end">
+                                <ion-text class="price">($15)</ion-text><br>
+                                <ion-text class="price">($18)</ion-text><br>
+                                <ion-text class="price">($05)</ion-text><br>
+                                <ion-text class="price">($12)</ion-text><br>
+                                <ion-text class="price">($25)</ion-text><br>
+                                <ion-text class="price">($22)</ion-text><br>
+                            </ion-col>
+                        </ion-row>
+                        <ion-row class="ion-padding-start ion-padding-end">
+                            <ion-col size="6">
+                                <ion-text class="totaltitle">Total : </ion-text>
+                            </ion-col>
+                            <ion-col size="6" class="ion-text-end">
+                                <ion-text class="totalprice">$99.00</ion-text>
+                            </ion-col>
+                        </ion-row>
+                    </div>
+                </ion-col>
+            </ion-row>
+        </div>
+    </ion-grid>
+</ion-content>

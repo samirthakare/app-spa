@@ -1,0 +1,176 @@
+.first {
+    .h2 {
+        font-size: 16px;
+        font-family: 'fivo-regular';
+        color: white;
+    }
+    .address {
+        font-size: 13px;
+        color: white;
+        font-family: 'fivo-regular';
+    }
+    h1 {
+        font-size: 'fivo-medium';
+        font-size: 20px;
+        color: white;
+    }
+    ion-item {
+        --border-radius: 5px;
+        ion-input {
+            --padding-start: 20px;
+            --placeholder-color: var(--ion-black-light-2-color);
+            font-size: 16px;
+            color: var(--ion-black-light-color);
+        }
+    }
+}
+
+.imgg {
+    background-image: url('http://placehold.it/375x268');
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+
+.slider {
+    display: -webkit-flex;
+    width: 100%;
+    overflow-x: auto;
+    ion-segment {
+        --background: none;
+        --border: none;
+        ion-segment-button {
+            --border-color: none;
+            border: none;
+            min-width: auto;
+            margin-right: 1px;
+            font-size: 18px;
+            --color: #91B4D8;
+            --color-checked: #265E9E;
+            font-family: fivo-medium;
+            margin-left: 22px;
+            margin-top: 7px;
+            --indicator-color-checked: none;
+        }
+    }
+}
+
+.head {
+    font-size: 22px;
+    color: #265E9E;
+    font-family: 'fivo-bold';
+}
+
+.slider2 {
+    display: -webkit-flex;
+    width: 100%;
+    margin-top: 15px;
+    overflow-x: auto;
+    margin-left: 5px;
+    .img {
+        margin-left: 16px;
+        min-width: 118px;
+        margin-right: -10px;
+        img {
+            width: 107px;
+            border-radius: 11px;
+            height: 131px;
+        }
+    }
+    .top {
+        position: relative;
+        margin-top: -33px;
+        padding-bottom: 12px;
+        text-align: center;
+        ion-label {
+            text-align: center;
+            color: white;
+            margin-left: -9px;
+            font-family: 'fivo-regular';
+        }
+    }
+    .live {
+        position: relative;
+        margin-top: -75px;
+        margin-left: 5px;
+        img {
+            height: 20px;
+            width: 55px;
+            margin-left: 10px;
+            margin-top: -68px;
+        }
+    }
+}
+
+.slider::-webkit-scrollbar {
+    display: none;
+}
+
+.slider2::-webkit-scrollbar {
+    display: none;
+}
+
+.salonList-row {
+    position: absolute;
+    left: 15px;
+    overflow-x: scroll;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+    .salon-section {
+        background: var(--ion-color-white);
+        border-radius: 10px;
+        box-shadow: 0px 3px 8px #dbdbdb;
+        height: 189 px;
+        border: 1px solid var(--ion-border-color);
+        .salon-image {
+            height: 100px;
+            width: 100%;
+            border-radius: 10px 10px 0px 0px;
+            img {
+                border-radius: 10px 10px 0px 0px;
+                height: 140px;
+                width: 100%;
+            }
+        }
+        .salon-detail {
+            padding-left: 14px;
+            display: flow-root;
+            .salon-name {
+                font-size: 15px;
+                font-family: "fivo-regular";
+                color: #265E9E;
+                margin-top: 46px;
+                margin-bottom: 5px;
+                padding-right: 11px;
+                .start-span {
+                    font-size: 13px;
+                    color: #91B4D8;
+                    img {
+                        margin-right: 5px;
+                    }
+                }
+            }
+            .salon-address {
+                font-size: 13px;
+                font-family: "fivo-regular";
+                margin-top: 0px;
+                margin-bottom: 1px;
+                color: #91B4D8;
+                padding-right: 11px;
+            }
+            .btn-book {
+                font-size: 13px;
+                font-family: "tofini_medium";
+                text-transform: initial;
+                --box-shadow: none;
+                height: 30px;
+                margin: 0px;
+                --border-radius: 8px 0px 8px 0px;
+                --padding-start: 17px;
+                --padding-end: 15px;
+            }
+        }
+    }
+}

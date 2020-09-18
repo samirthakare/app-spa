@@ -1,0 +1,752 @@
+/* ion-header {
+    background: url("../../../assets/images/Group\ 6630.png");
+} */
+
+.header {
+    background-image: url("http://placehold.it/375x289");
+    height: 289px;
+    position: relative;
+}
+
+ion-toolbar {
+    --background: transparent;
+    --ion-color-base: transparent !important;
+    transform-style: flat;
+    transition: background-color 0.5s ease-in 0.5s;
+    ion-button {
+        --padding-start: 0px;
+        --padding-end: 0px;
+        --ripple-color: var(--ion-color-white);
+        .back-icon {
+            width: 23.74px;
+            height: 20px;
+        }
+        .bookmark-icon {
+            width: 17px;
+            height: 24px;
+            color: #FF3939;
+        }
+    }
+}
+
+.top {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+}
+
+.top-right {
+    right: 20px;
+    position: absolute;
+    top: 50%;
+}
+
+ion-content {
+    --background: none;
+    background-repeat: no-repeat;
+    background-size: 100% 290px;
+    ion-header {
+        position: fixed;
+        top: 0px;
+        left: 0px;
+    }
+    .salon-detail {
+        padding: 1px 16px 16px;
+        position: absolute;
+        background: rgba(2, 3, 3, 0);
+        margin-top: 131px;
+        .salon-name {
+            font-family: "fivo-bold";
+            color: var(--ion-color-white);
+            margin-bottom: 0px;
+            margin-top: 60px;
+        }
+        .salon-address {
+            font-size: 13px;
+            font-family: "fivo-regular";
+            color: var(--ion-color-white);
+            margin-top: 0px;
+        }
+        .rating-div {
+            position: relative;
+            ion-icon {
+                font-size: 20px;
+                margin-bottom: -5px;
+            }
+            .white-star {
+                color: var(--ion-color-white);
+            }
+            .orange-start {
+                color: var(--star-color);
+            }
+            .total-review-lbl {
+                font-size: 12px;
+                font-family: "fivo-regular";
+                margin-left: 12px;
+                color: var(--ion-color-white);
+            }
+        }
+        .open-label {
+            color: var(--ion-color-green);
+            width: fit-content;
+            border: 1px solid var(--ion-color-green);
+            font-size: 12px;
+            padding: 3px 8px 2px 7px;
+            border-radius: 3px;
+            font-family: "tofini_medium";
+            bottom: -3px;
+            position: absolute;
+            right: 0px;
+            margin: 0px;
+        }
+    }
+    .section-two {
+        .btn-row {
+            padding-top: 4px;
+            padding-bottom: 4px;
+            background-color: #F2F4FF;
+            .icon-website {
+                width: 25.26px;
+                height: 26.17px;
+                margin-bottom: 7px;
+                margin-top: 5px;
+                color: var(--ion-color-orange);
+            }
+            .icon-call {
+                height: 38px;
+                width: 38px;
+                color: var(--ion-color-orange);
+            }
+            .icon-direction {
+                width: 28px;
+                height: 30px;
+                margin-bottom: 7px;
+                margin-top: 1px;
+                color: var(--ion-color-orange);
+            }
+            .icon-share {
+                width: 25px;
+                height: 22px;
+                margin-bottom: 7px;
+                margin-top: 7px;
+                color: var(--ion-color-orange);
+            }
+            p {
+                margin: 0px;
+                font-size: 13px;
+                font-family: "tofini_regular";
+                color: var(--ion-color-lightGray);
+            }
+        }
+        .specialist-title {
+            font-size: 18px;
+            font-family: "fivo-bold";
+            margin-top: 26px;
+            color: var(--ion-black-light-color);
+        }
+        .employee-row {
+            padding-bottom: 10px;
+            overflow-x: scroll;
+            margin-left: 3px;
+            &::-webkit-scrollbar {
+                display: none;
+            }
+            .image-div {
+                height: 64px;
+                width: 64px;
+                margin: 0px auto;
+                border-radius: 50%;
+                border: 1.5px solid var(--ion-color-orange);
+                padding: 3px 2px 2px 2px;
+                img {
+                    height: 100%;
+                    width: 100%;
+                    border-radius: 50%;
+                }
+            }
+            .active {
+                border-color: var(--ion-color-orange);
+            }
+            .emp-name {
+                font-size: 12px;
+                font-family: "tofini_regular";
+                margin-bottom: 2px;
+            }
+            .emp-deg {
+                font-size: 11px;
+                font-family: "tofini_book";
+                color: var(--ion-color-lightGray);
+                margin: 0px;
+            }
+        }
+        ion-segment {
+            --background: #F2F4FF;
+            ion-segment-button {
+                text-transform: initial;
+                --padding-start: 0px;
+                --padding-end: 0px;
+                --background-checked: #F2F4FF;
+                --color: var(--ion-black-light-2-color);
+                font-size: 16px;
+                font-family: "fivo-regular";
+                --color-checked: var(--ion-color-orange);
+                --border-color: none;
+                --indicator-color-checked: none;
+            }
+        }
+    }
+    .segment-tabs {
+        background-color: var(--ion-color-white);
+        hr {
+            border: 0.5px solid #91B4D8;
+            opacity: 0.2;
+        }
+        .about-div {
+            padding: 10px 16px 0px 16px;
+            .title {
+                font-size: 16px;
+                font-family: "fivo-regular";
+                color: var(--ion-black-light-color);
+            }
+            .about-content {
+                font-size: 14px;
+                font-size: 15px;
+                font-family: "fivo-regular";
+                color: var(--ion-black-light-color);
+                line-height: 18px;
+                margin-bottom: 5px;
+            }
+            a {
+                font-size: 14px;
+                font-family: "tofini_regular";
+                color: var(--ion-color-orange);
+            }
+            .circle {
+                height: 8px;
+                width: 8px;
+                position: absolute;
+                background-color: var(--ion-color-orange);
+                border-radius: 50%;
+                left: 1px;
+                margin-top: 2px;
+                margin-right: 20px;
+            }
+            .dayname {
+                font-size: 14px;
+                padding-top: 7px;
+                font-family: "tofini_regular";
+                color: var(--ion-color-MiddleGray);
+            }
+            ion-text {
+                margin-left: 20px;
+                color: var(--ion-black-light-color);
+                font-family: "fivo-regular";
+            }
+            .time {
+                font-size: 14px;
+                font-family: "tofini_medium";
+                color: var(--ion-color-MiddleGray);
+            }
+            .address {
+                color: var(--ion-black-light-color);
+                font-size: 14px;
+                font-family: "fivo-regular";
+                margin-bottom: 8px;
+            }
+            .btn-direction {
+                font-size: 13px;
+                font-family: "tofini_regular";
+                text-transform: initial;
+                --padding-start: 0em;
+                --padding-end: 0em;
+                ion-icon {
+                    height: 14px;
+                    width: 14px;
+                    margin-right: 5px;
+                }
+            }
+            .btn-viewAll {
+                height: 18px;
+                font-size: 14px;
+                font-family: "tofini_medium";
+                --color: var(--ion-color-lightGray);
+                --color-activated: var(--ion-color-lightGray);
+                text-transform: initial;
+                --padding-start: 0em;
+                --padding-end: 0em;
+            }
+            .photo-row {
+                overflow-x: scroll;
+                &::-webkit-scrollbar {
+                    display: none;
+                }
+                img {
+                    border-radius: 10px;
+                }
+            }
+            .btn-book {
+                --color: var(--ion-color-white);
+                height: 44px;
+                margin: 30px 16px 20px 16px;
+                padding: 5px;
+                font-size: 20px;
+                --box-shadow: none;
+                font-family: "fivo-medium";
+                --background: #FC4A1A;
+                text-transform: inherit;
+            }
+        }
+        .services-div {
+            padding: 20px 16px 0px 16px;
+            ion-item {
+                --padding-start: 0px;
+                --inner-padding-end: 0px;
+                h3 {
+                    font-size: 16px;
+                    font-family: "tofini_medium";
+                    .btn-view {
+                        font-size: 13px;
+                        font-family: "tofini_medium";
+                        --padding-start: 0em;
+                        --padding-end: 0em;
+                        text-transform: initial;
+                        margin: 0px;
+                        height: 20px;
+                    }
+                }
+                p {
+                    font-size: 13px;
+                    font-family: "tofini_book";
+                    color: var(--ion-color-lightGray);
+                }
+                ion-thumbnail {
+                    border-radius: 10px;
+                }
+                ion-icon {
+                    font-size: 33px;
+                    padding: 11px 9px 11px 13px;
+                }
+            }
+            ion-segment {
+                --background-checked: var(--ion-color-orange);
+                --color-checked: white;
+                --border-color: var(--ion-color-orange);
+                --color: var(--ion-color-orange);
+            }
+            ion-segment-button {
+                height: 32px;
+                font-size: 14px;
+                font-family: 'fivo-regular';
+                --border-radius: 4px;
+            }
+            .hair {
+                .itemfirst {
+                    height: 83px;
+                    box-shadow: 0px 11px 14px 1px #E5ECED;
+                    border-radius: 14px;
+                    margin-top: 10px;
+                    border-radius: 10px;
+                    img {
+                        margin-left: 10px;
+                    }
+                    .style {
+                        font-size: 16px;
+                        margin-left: 15px;
+                        color: var(--ion-black-light-color);
+                        font-family: "fivo-regular";
+                    }
+                    .serv {
+                        font-size: 13px;
+                        color: var(--ion-black-light-2-color);
+                        margin-left: 15px;
+                        font-family: "fivo-regular";
+                    }
+                    .view {
+                        font-size: 14px;
+                        color: var(--ion-color-orange);
+                        font-family: "fivo-regular";
+                    }
+                }
+                .border-left1 {
+                    border-left: 3.4px solid #FFCE54;
+                    height: 83px;
+                }
+                .border-left2 {
+                    border-left: 3.4px solid #A0D468;
+                    height: 83px;
+                }
+                .border-left3 {
+                    border-left: 3.4px solid #AC92EC;
+                    height: 83px;
+                }
+                .border-left4 {
+                    border-left: 3.4px solid #81D4F9;
+                    height: 83px;
+                }
+                .border-left5 {
+                    border-left: 3.4px solid #FF8964;
+                    height: 83px;
+                }
+                .border-left6 {
+                    border-left: 3.4px solid #5C9DED;
+                    height: 83px;
+                }
+                .item {
+                    height: 83px;
+                    box-shadow: 0px 0px 2px 1px #E5ECED;
+                    border-radius: 14px;
+                    margin-top: 10px;
+                    border-radius: 10px;
+                    .border-left {
+                        border-left: 3.4px solid #ED5565;
+                        height: 83px;
+                    }
+                    img {
+                        margin-left: 10px;
+                        border-radius: 5px;
+                    }
+                    .style {
+                        font-size: 16px;
+                        margin-left: 15px;
+                        color: var(--ion-black-light-color);
+                        font-family: "fivo-regular";
+                    }
+                    .serv {
+                        font-size: 13px;
+                        color: var(--ion-black-light-2-color);
+                        margin-left: 15px;
+                        font-family: "fivo-regular";
+                    }
+                    .view {
+                        font-size: 14px;
+                        color: var(--ion-color-orange);
+                        font-family: "fivo-regular";
+                        padding-right: 5px;
+                    }
+                }
+            }
+            .packages {
+                img {
+                    border-radius: 5px;
+                }
+                .heading {
+                    font-size: 16px;
+                    color: var(--ion-black-light-color);
+                    font-family: "fivo-bold";
+                }
+                .subheading {
+                    font-size: 12px;
+                    color: var(--ion-black-light-2-color);
+                    font-family: "fivo-regular";
+                }
+                .book-now {
+                    font-size: 14px;
+                    color: var(--ion-color-orange);
+                    font-family: "fivo-medium";
+                }
+                .price {
+                    font-size: 13px;
+                    color: var(--ion-black-light-2-color);
+                    font-family: "fivo-regular";
+                }
+                hr {
+                    border: 1px solid #91B4D8;
+                    background-color: #91B4D8;
+                    opacity: 0.2;
+                    border-radius: 15px;
+                    margin-top: 20px;
+                    margin-bottom: 20px;
+                }
+            }
+            .price {
+                .heading {
+                    font-size: 16px;
+                    color: var(--ion-color-orange);
+                    font-family: "tofini_medium";
+                }
+                ion-item {
+                    border: none;
+                    margin-bottom: -12px;
+                    box-shadow: none;
+                    border-radius: 0;
+                    margin-top: 0;
+                    border-radius: 0;
+                    --inner-padding-end: 0px;
+                    ion-checkbox {
+                        --size: 15px;
+                        --border-color: var(--ion-black-light-color);
+                        --checkmark-color: var(--ion-black-light-color);
+                        --background-checked: none;
+                        --border-color-checked: var(--ion-black-light-color);
+                        button {
+                            padding: 0px !important;
+                        }
+                    }
+                    .head,
+                    .price {
+                        font-size: 16px;
+                        color: var(--ion-black-light-color);
+                        margin-left: 13px;
+                        font-family: "fivo-regular";
+                    }
+                }
+            }
+            .total {
+                height: 60px;
+                padding: 2px;
+                background-color: var(--fill-color);
+                .tot {
+                    color: #265E9E;
+                    font-size: 15px;
+                    font-family: "fivo-regular";
+                }
+                .price {
+                    color: #265E9E;
+                    font-size: 15px;
+                    font-family: "fivo-regular";
+                }
+            }
+        }
+        .firstrow {
+            img {
+                border-radius: 10px;
+                margin-bottom: 5px;
+            }
+            ion-col {
+                padding: 5px;
+                padding-bottom: 7px;
+            }
+        }
+        .review-div {
+            .itemm {
+                ion-item {
+                    height: 40px;
+                    --background: #F2F4FF;
+                    border-radius: 5px;
+                    border: 0.5px solid var(--ion-black-light-2-color);
+                    ion-input {
+                        --padding-start: 20px;
+                        font-size: 14px;
+                        --placeholder-color: #91B4D8;
+                        --placeholder-opacity: 0.6;
+                        font-family: 'fivo-oblique';
+                        --padding-top: 4px;
+                        color: var(--ion-black-light-color);
+                    }
+                }
+            }
+            .rating {
+                margin-top: -3px;
+                ion-icon {
+                    font-size: 20px;
+                    margin-right: 4px;
+                    &:last-child {
+                        margin-right: 0px;
+                    }
+                    color: var(--ion-border-color);
+                }
+                .selected {
+                    color: var(--star-color);
+                }
+            }
+            h3 {
+                font-size: 18px;
+                color: var(--ion-black-light-color);
+                font-family: "fivo-regular";
+            }
+            .post {
+                font-size: 15px;
+                text-transform: initial;
+                font-family: "tofini_regular";
+                --padding-top: 4px;
+                --padding-end: 20px;
+                --padding-start: 20px;
+                background-color: red;
+            }
+            .btn-post {
+                margin-top: -3px;
+                font-size: 15px;
+                height: 30px;
+                width: 80px;
+                text-transform: initial;
+                font-family: "tofini_regular";
+                --padding-top: 4px;
+                --padding-end: 20px;
+                --padding-start: 20px;
+            }
+            .write-review {
+                padding: 10px 16px 0px 16px;
+                position: relative;
+                height: 165px;
+                border-bottom: 1px solid var(--ion-border-color);
+                h5 {
+                    font-size: 14px;
+                    font-family: "tofini_medium";
+                    color: var(--ion-color-simpleDark);
+                    .rating {
+                        margin-top: -3px;
+                        ion-icon {
+                            font-size: 20px;
+                            margin-right: 4px;
+                            &:last-child {
+                                margin-right: 0px;
+                            }
+                            color: var(--ion-border-color);
+                        }
+                        .selected {
+                            color: var(--ion-color-darkYellow);
+                        }
+                    }
+                }
+                .input-item {
+                    margin-top: 10px;
+                    --padding-start: 0px;
+                    --inner-padding-end: 0px;
+                    ion-avatar {
+                        height: 48px;
+                        width: 48px;
+                    }
+                    ion-input {
+                        --background: var(--ion-input-back);
+                        --placeholder-color: var(--ion-placeholder-color);
+                        font-size: 15px;
+                        font-family: "tofini_regular";
+                        border-radius: 20px;
+                        --padding-start: 19px;
+                        --padding-top: 14px;
+                        --padding-bottom: 8px;
+                        --padding-end: 16px;
+                    }
+                }
+                .btn-post {
+                    position: absolute;
+                    right: 16px;
+                    bottom: 15px;
+                    font-size: 15px;
+                    text-transform: initial;
+                    font-family: "tofini_regular";
+                    --padding-top: 4px;
+                    --padding-end: 20px;
+                    --padding-start: 20px;
+                }
+            }
+            .display-review {
+                padding: 0px 0px 0px 16px;
+                .all-review-title {
+                    font-size: 14px;
+                    margin-bottom: 0px;
+                    font-family: "tofini_medium";
+                    color: var(--ion-color-simpleDark);
+                }
+                .single-review {
+                    border-bottom: 1px solid var(--ion-border-color);
+                    padding-right: 16px;
+                    margin-top: 6px;
+                    ion-item {
+                        --padding-start: 0px;
+                        --inner-padding-end: 0px;
+                        ion-avatar {
+                            height: 54px;
+                            width: 54px;
+                        }
+                        .username {
+                            font-size: 16px;
+                            font-family: "tofini_medium";
+                            .time {
+                                font-size: 11px;
+                                font-family: "tofini_regular";
+                                color: var(--ion-color-simpleDark);
+                                margin-top: 5px;
+                            }
+                        }
+                        .stars {
+                            ion-icon {
+                                color: var(--ion-border-color);
+                                margin-right: 2px;
+                                font-size: 15px;
+                            }
+                            .color-star {
+                                color: var(--ion-color-darkYellow);
+                            }
+                        }
+                    }
+                    .review-content {
+                        font-size: 14px;
+                        font-family: "tofini_regular";
+                        margin-top: 0px;
+                        line-height: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.text {
+    font-size: 12px;
+    color: var(--ion-black-light-color);
+    font-family: 'fivo-regular';
+    margin-bottom: 24px;
+    margin-top: 21px;
+}
+
+.time {
+    font-size: 12px;
+    color: var(--ion-black-light-2-color);
+    font-family: 'fivo-regular';
+}
+
+.stars {
+    ion-icon {
+        color: var(--star-color);
+        margin-right: 2px;
+        font-size: 15px;
+    }
+    .color-star {
+        color: var(--ion-star-color);
+    }
+}
+
+.name {
+    font-size: 18px;
+    color: var(--ion-black-light-color);
+    font-family: 'fivo-regular';
+}
+
+.img2 {
+    height: 70px;
+    width: 70px;
+    border: 0.5px solid var(--ion-border-color);
+    padding: 5px;
+    border-radius: 5px;
+}
+
+ion-label {
+    color: #265E9E;
+    font-size: 12.5px;
+    font-family: "fivo-regular";
+}
+
+.sublabel {
+    font-size: 11px;
+    color: var(--ion-black-light-2-color);
+}
+
+.lastitem {
+    --padding-start: 14px;
+    --padding-end: 0px;
+    border-radius: 12px;
+    --background: var(--fill-color);
+    --border-radius: 6px;
+    margin-bottom: 10px;
+}
+
+.btn-continue {
+    --color: var(--ion-color-white);
+    height: 42px;
+    font-size: 15px;
+    --box-shadow: none;
+    font-family: "tofini_regular";
+    --background: var(--ion-color-gradiant);
+    text-transform: inherit;
+}

@@ -1,0 +1,61 @@
+<ion-header no-border>
+    <ion-toolbar class="ion-no-padding">
+        <img src="http://placehold.it/375X289" alt="" height="289px" width="100%">
+        <div class="salon-detail">
+            <h2 class="salon-name">Luxury Life Salon</h2>
+            <p class="salon-address">445 Morgan Camp, New Deltaton, NY, Iran</p>
+            <div class="rating-div">
+                <ion-icon class="orange-start" src="../../../assets/images/General/_ionicons_svg_ios-star.svg"></ion-icon>
+                <ion-icon class="orange-start" src="../../../assets/images/General/_ionicons_svg_ios-star.svg"></ion-icon>
+                <ion-icon class="orange-start" src="../../../assets/images/General/_ionicons_svg_ios-star.svg"></ion-icon>
+                <ion-icon class="white-star" src="../../../assets/images/General/_ionicons_svg_ios-star.svg"></ion-icon>
+                <ion-icon class="white-star" src="../../../assets/images/General/_ionicons_svg_ios-star.svg"></ion-icon>
+                <span class="total-review-lbl">(125 Reviews)</span>
+                <p class="open-label ion-text-uppercase">Open</p>
+            </div>
+        </div>
+        <div class="top">
+            <img (click)="goBack()" src="../../../assets/Icon ionic-ios-arrow-back.png">
+        </div>
+        <div class="top-right">
+            <img src="../../../assets/Icon ionic-ios-heart.png">
+        </div>
+
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-grid class="ion-no-padding">
+        <ion-row class="ion-padding">
+            <ion-col size="12">
+                <ion-text class="heading-bold">Bridal Beauty Makeup</ion-text><br>
+                <ion-text class="com">Complete package offer till May 31, 2020</ion-text>
+                <p class="text">
+                    Women want to feel attractive. We offer timeless beauty package to accentuate their natural beauty so they can feel beautiful in every day.
+                </p>
+                <ion-item class="ion-no-padding" lines="none">
+                    <ion-text class="heading2-bold">Service</ion-text>
+                    <ion-text class="total" slot="end"> Total : $320.00</ion-text>
+                </ion-item>
+                <hr>
+
+                <ion-row>
+                    <ion-col *ngFor="let s of serviceList" size="6" style="margin-bottom: 5px;">
+                        <img src="../../../assets/foursquare-check-in.png">&nbsp;
+                        <ion-text class="com2">{{s.name}}</ion-text>
+                    </ion-col>
+                </ion-row>
+                <hr>
+                <ion-row class="ion-padding-top">
+                    <ion-col size="12">
+                        <ion-button class="btn-continue" mode="md" expand="block" (click)="time()">
+                            Book Now
+                        </ion-button>
+                    </ion-col>
+                </ion-row>
+            </ion-col>
+
+        </ion-row>
+
+    </ion-grid>
+</ion-content>

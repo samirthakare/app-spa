@@ -1,0 +1,29 @@
+ion-tabs {
+    ion-tab-bar {
+        --background: #f9f9f9;
+        padding-top: 12px;
+        padding-bottom: 12px;
+        box-shadow: 0px -1px 3px 1px #dddddd;
+        border-top-left-radius: 12px;
+        border-top-right-radius: 12px;
+        ion-tab-button {
+            ion-icon {
+                height: 25px;
+                width: 25px;
+                color: #8e8e93;
+            }
+            ion-label {
+                font-size: 12px;
+                margin-top: 10px;
+                color: #8e8e93;
+                font-family: 'fivo-regular';
+                margin-top: 10px;
+            }
+            .calendar-icon {
+                height: 23px;
+                width: 23px;
+                margin-bottom: 3px;
+            }
+        }
+    }
+}

@@ -1,0 +1,100 @@
+<ion-header no-border>
+    <ion-toolbar class="ion-no-padding">
+        <img src="http://placehold.it/375X289" alt="" height="289px" width="100%">
+        <div class="salon-detail">
+            <h2 class="salon-name">Luxury Life Salon</h2>
+            <p class="salon-address">445 Morgan Camp, New Deltaton, NY, Iran</p>
+            <div class="rating-div">
+                <ion-icon class="orange-start" src="../../../assets/images/General/_ionicons_svg_ios-star.svg"></ion-icon>
+                <ion-icon class="orange-start" src="../../../assets/images/General/_ionicons_svg_ios-star.svg"></ion-icon>
+                <ion-icon class="orange-start" src="../../../assets/images/General/_ionicons_svg_ios-star.svg"></ion-icon>
+                <ion-icon class="white-star" src="../../../assets/images/General/_ionicons_svg_ios-star.svg"></ion-icon>
+                <ion-icon class="white-star" src="../../../assets/images/General/_ionicons_svg_ios-star.svg"></ion-icon>
+                <span class="total-review-lbl">(125 Reviews)</span>
+                <p class="open-label ion-text-uppercase">Open</p>
+            </div>
+        </div>
+        <div class="top">
+            <img (click)="goBack()" src="../../../assets/Icon ionic-ios-arrow-back.png">
+        </div>
+        <div class="top-right">
+            <img src="../../../assets/Icon ionic-ios-heart.png">
+        </div>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-grid class="ion-no-padding">
+        <ion-row class="ion-padding-start ion-padding-end ion-padding-top">
+            <ion-col size="12">
+                <ion-text class="h1"> Top Specialist</ion-text>
+            </ion-col>
+        </ion-row>
+        <ion-row class="ion-padding-start ion-padding-end ion-text-center ion-padding-bottom ion-margin-top">
+            <ion-col *ngFor="let i of salonSpecialist" size="3">
+                <div (click)="isExpand = !isExpand" [class]="isExpand != true ? 'b' : 'img2active'">
+                    <div class="img2">
+                        <img src="{{i.img}}">
+                    </div>
+                    <div>
+                        <ion-label>{{i.name}}</ion-label><br>
+                    </div>
+                </div>
+            </ion-col>
+        </ion-row>
+        <ion-row class="ion-padding-start ion-padding-end ion-padding-top">
+            <ion-col size="6">
+                <ion-text class="h1"> Select Date</ion-text>
+            </ion-col>
+            <ion-col size="6" class="ion-text-end">
+                <img src="../../../assets/bac.png">&nbsp;&nbsp;
+                <ion-text class="h11">May 2020</ion-text>&nbsp;&nbsp;
+                <img src="../../../assets/back.png">
+            </ion-col>
+        </ion-row>
+        <div class="slidecontainer ion-margin-start ion-margin-top ion-margin-bottom">
+            <div class="date">
+                24<br> <span>Sun</span>
+            </div>
+            <div class="date">
+                25<br> <span>Mon</span>
+            </div>
+            <div class="date">
+                26<br> <span>Tue</span>
+            </div>
+            <div class="date">
+                27<br> <span>Wed</span>
+            </div>
+            <div class="date">
+                28<br> <span>Thur</span>
+            </div>
+            <div class="date">
+                29<br> <span>Fri</span>
+            </div>
+        </div>
+        <ion-row class="ion-padding-start ion-padding-end">
+            <ion-col size="12">
+                <h4 class="title">Available slot</h4>
+                <div class="booking-slot-div">
+                    <ion-row>
+                        <ion-col [ngClass]="{
+          'no-right-padding': (i + 1) % 4 == 0,
+          'no-left-padding': i == 0 || i % 4 == 0
+        }" size="3" *ngFor="let time of timeSlot; let i = index" (click)="setTimeSlot(time)">
+                            <div class="slot" [ngClass]="{ active: activeTimeSlot == time }">
+                                {{ time }}
+                            </div>
+                        </ion-col>
+                    </ion-row>
+                </div>
+            </ion-col>
+        </ion-row>
+        <ion-row class="ion-padding-start ion-padding-end">
+            <ion-col size="12">
+                <ion-button class="btn-continue" (click)="bookingdetails()" mode="md" expand="block">
+                    Book Now
+                </ion-button>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-content>

@@ -1,0 +1,93 @@
+<ion-content mode="ios">
+    <ion-grid class="ion-no-padding">
+        <div class="imgg">
+            <ion-row class="first" style="border-bottom-left-radius: 20px;border-bottom-right-radius: 20px;width: 100%;">
+                <ion-col size="12">
+                    <ion-row class="ion-padding">
+                        <ion-col size="12">
+                            <img src="../../../assets/images/General/location.png"> &nbsp;&nbsp;
+                            <ion-text class="h2">Dorothy Pierce</ion-text><br> &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;
+                            <ion-text class="address">46 Park Avenue, Wembly London</ion-text>
+                        </ion-col>
+                    </ion-row>
+                    <ion-row class="ion-padding ion-margin-top">
+                        <ion-col size="12" style="margin-top: 15px;">
+                            <h1>Find and book best service</h1>
+                            <ion-item class="ion-no-padding" lines="none">
+                                <ion-input placeholder="Search salon, spa, barber">
+                                </ion-input>
+
+                                <img src="../../../assets/noun_Search_3067270.png" slot="end" alt="">
+                            </ion-item>
+                        </ion-col>
+                    </ion-row>
+                </ion-col>
+            </ion-row>
+        </div>
+
+        <ion-row (click)="goNext()" class="ion-padding-start ion-padding-end ion-padding-top head">
+            <ion-col size="12">
+                <ion-text>Top Services</ion-text>
+            </ion-col>
+        </ion-row>
+        <div class="slider">
+            <div>
+                <ion-segment [(ngModel)]="select" mode="md">
+                    <ion-segment-button href="#HAIR" value="HAIR">
+                        <ion-label>Hairstyle</ion-label>
+                    </ion-segment-button>
+                    <ion-segment-button href="#FAC" value="FAC">
+                        <ion-label>Facial</ion-label>
+                    </ion-segment-button>
+                    <ion-segment-button href="#TRIM" value="TRIM">
+                        <ion-label>Trimming</ion-label>
+                    </ion-segment-button>
+                    <ion-segment-button href="#SAVE" value="SAVE">
+                        <ion-label>Saving</ion-label>
+                    </ion-segment-button>
+                    <ion-segment-button href="#EYE" value="EYE">
+                        <ion-label>Eye</ion-label>
+                    </ion-segment-button>
+                </ion-segment>
+            </div>
+        </div>
+        <div class="slider2">
+            <div *ngFor="let s of slider2" class="img">
+                <img src="{{s.img}}">
+                <div class="top ion-text-center">
+                    <ion-label>
+                        {{s.name}}
+                    </ion-label>
+                </div>
+            </div>
+        </div>
+
+        <ion-row class="ion-padding-start ion-padding-end ion-padding-top head" style="margin-bottom: 8px;">
+            <ion-col size="8">
+                <ion-text>Best Saloon</ion-text>
+            </ion-col>
+            <ion-col size="4" class="ion-text-end">
+                <ion-text style="font-size: 16px;font-family: 'fivo-regular';opacity: 0.6;">View all</ion-text>
+            </ion-col>
+        </ion-row>
+        <ion-row class="salonList-row" nowrap style="margin-bottom: 10px;">
+            <ion-col style="padding-right: 10px;" size="8" size-md="5" size-xl="4" *ngFor="let salon of salonList" (click)="salonDetail($event)">
+                <div class="salon-section">
+                    <div class="salon-image">
+                        <img class="salon-img" [src]="salon.image" alt="" />
+                    </div>
+                    <div class="salon-detail">
+                        <h5 class="salon-name">
+                            {{ salon.name }}
+                            <span class="start-span ion-float-right"><img src="../../../assets/images/General/ic_star.svg" alt="" />{{
+                      salon.star
+                    }}</span>
+                        </h5>
+                        <p class="salon-address">{{ salon.address }}</p>
+
+                    </div>
+                </div>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-content>

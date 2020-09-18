@@ -1,0 +1,172 @@
+.h1 {
+    font-size: 20px;
+    color: var(--ion-black-light-color);
+    font-family: 'fivo-regular';
+}
+
+.h11 {
+    font-size: 18px;
+    color: var(--ion-black-light-color);
+    font-family: 'fivo-regular';
+}
+
+.slidecontainer {
+    display: -webkit-flex;
+    overflow: scroll;
+    .date {
+        height: 80px;
+        min-width: 70px;
+        background-color: var(--fill-color);
+        padding: 13px;
+        font-size: 22px;
+        color: var(--ion-black-light-color);
+        text-align: center;
+        margin-right: 16px;
+        border-radius: 7px;
+        span {
+            color: var(--ion-black-light-2-color);
+            font-size: 16px;
+            font-family: 'fivo-regular';
+        }
+    }
+}
+
+.slidecontainer::-webkit-scrollbar {
+    display: none;
+}
+
+ion-toolbar {
+    .salon-detail {
+        position: absolute;
+        bottom: 3%;
+        padding: 1px 16px 16px;
+        margin-top: 7.6rem;
+        background: rgba(2, 3, 3, 0);
+        .salon-name {
+            font-family: "fivo-bold";
+            color: var(--ion-color-white);
+            margin-bottom: 0px;
+            margin-top: 60px;
+        }
+        .salon-address {
+            font-size: 13px;
+            font-family: "fivo-regular";
+            color: var(--ion-color-white);
+            margin-top: 0px;
+        }
+        .rating-div {
+            position: relative;
+            ion-icon {
+                font-size: 20px;
+                margin-bottom: -5px;
+            }
+            .white-star {
+                color: var(--ion-color-white);
+            }
+            .orange-start {
+                color: var(--star-color);
+            }
+            .total-review-lbl {
+                font-size: 12px;
+                font-family: "fivo-regular";
+                margin-left: 12px;
+                color: var(--ion-color-white);
+            }
+        }
+        .open-label {
+            color: var(--ion-color-green);
+            width: fit-content;
+            border: 1px solid var(--ion-color-green);
+            font-size: 12px;
+            padding: 3px 8px 2px 7px;
+            border-radius: 3px;
+            font-family: "tofini_medium";
+            bottom: -3px;
+            position: absolute;
+            right: 0px;
+            margin: 0px;
+        }
+    }
+}
+
+.img2active {
+    height: 70px;
+    width: 70px;
+    border: 0.5px solid var(--ion-color-orange);
+    padding: 5px;
+    border-radius: 5px;
+    ion-label {
+        color: var(--ion-color-orange);
+        font-size: 12.5px;
+        /* padding-top: 12px; */
+        font-family: "fivo-regular";
+    }
+}
+
+.b {
+    height: 70px;
+    width: 70px;
+    border: 0.5px solid var(--ion-border-color);
+    padding: 5px;
+    border-radius: 5px;
+    ion-label {
+        color: #265E9E;
+        font-size: 12.5px;
+        /* padding-top: 12px; */
+        font-family: "fivo-regular";
+    }
+    .sublabel {
+        font-size: 11px;
+        color: var(--ion-black-light-2-color);
+    }
+}
+
+.top {
+    position: absolute;
+    top: 8%;
+    left: 20px;
+}
+
+.top-right {
+    right: 20px;
+    position: absolute;
+    top: 8%;
+}
+
+.booking-slot-div {
+    .slot {
+        width: 100%;
+        text-align: center;
+        background-color: var(--fill-color);
+        border: 1px solid var(--ion-border-color);
+        color: var(--ion-black-light-color);
+        font-size: 13px;
+        padding: 9px 0px 7px;
+        font-family: "tofini_regular";
+        border-radius: 4px;
+    }
+    .active {
+        color: var(--ion-color-white);
+        background: var(--ion-color-orange);
+        border-color: var(--ion-color-orange);
+    }
+}
+
+.title {
+    font-size: 20px;
+    font-family: "fivo-medium";
+    margin-top: 0px;
+    color: var(--ion-black-light-color);
+}
+
+.btn-continue {
+    --color: var(--ion-color-white);
+    height: 44px;
+    /*  margin: 35px 8px 20px 8px; */
+    margin-top: 14px;
+    font-size: 15px;
+    --box-shadow: none;
+    font-family: "tofini_regular";
+    --background: var(--ion-color-gradiant);
+    text-transform: inherit;
+}

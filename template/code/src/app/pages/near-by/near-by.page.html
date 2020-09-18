@@ -1,0 +1,71 @@
+<ion-header no-border>
+    <ion-toolbar>
+
+        <ion-row class="ion-padding-top">
+            <ion-col size="1">
+                <img src="../../../assets/location.png"> &nbsp;
+            </ion-col>
+            <ion-col size="9">
+                <ion-text class="header-text">Hello Dorothy Pierce </ion-text><br>
+                <ion-text class="address">46 Park Avenue, Wembly London</ion-text>
+            </ion-col>
+            <ion-col size="2" class="ion-padding-start">
+                <ion-buttons>
+                    <ion-button class="btn-filter" (click)="openFilter()">
+                        <ion-icon src="../../../assets/images/General/_ionicons_svg_ios-funnel.svg"></ion-icon>
+                    </ion-button>
+                </ion-buttons>
+            </ion-col>
+        </ion-row>
+        <ion-row class="ion-padding-end">
+            <ion-col size="12">
+                <ion-item class="ion-no-padding" lines="none">
+                    <ion-input placeholder="salon"></ion-input>
+                    <ion-button class="btn-filter" fill="clear">
+                        <img src="../../../assets/noun_Search_3067270.png" slot="end" alt="">
+                    </ion-button>
+                </ion-item>
+            </ion-col>
+        </ion-row>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen="true">
+
+    <div #map id="map" style="height: 100%;width: 100%;position: initial !important;"></div>
+
+    <div class="map-button">
+        <div class="info-icon">
+            <ion-icon src="../../../assets/images/near-by/ic_info.svg"></ion-icon>
+        </div>
+        <ion-icon class="location" src="../../../assets/images/near-by/ic_location_clear.svg"></ion-icon><br>
+    </div>
+
+    <ion-fab vertical="bottom" horizontal="end" slot="fixed" (click)="openNearModal()">
+        <ion-fab-button>
+            <ion-icon src="../../../assets/images/General/noun_List_204249.svg"></ion-icon>
+        </ion-fab-button>
+    </ion-fab>
+
+    <ion-row class="salonList-row ion-margin-bottom" nowrap>
+        <ion-col style="padding-right: 10px;" size="8" size-md="5" size-xl="4" *ngFor="let salon of salonList" (click)="salonDetail($event)">
+            <div class="salon-section">
+                <div class="salon-image">
+                    <img class="salon-img" [src]="salon.image" alt="" />
+                </div>
+                <div class="salon-detail">
+                    <h5 class="salon-name">
+                        {{ salon.name }}
+                        <span class="start-span ion-float-right"><img src="../../../assets/images/General/ic_star.svg" alt="" />{{
+          salon.star
+        }}</span>
+                    </h5>
+                    <p class="salon-address">{{ salon.address }}</p>
+
+                </div>
+            </div>
+        </ion-col>
+    </ion-row>
+
+
+</ion-content>

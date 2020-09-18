@@ -1,0 +1,370 @@
+<ion-content [scrollEvents]="true" (ionScroll)="logScrolling($event)">
+
+    <ion-header no-border>
+        <ion-toolbar [style.backgroundColor]="state == 1 ? '' : 'rgba(0,0,0,0.7)'">
+
+            <div class="top">
+                <img (click)="goBack()" src="../../../assets/Icon ionic-ios-arrow-back.png">
+            </div>
+            <div class="top-right">
+                <img src="../../../assets/Icon ionic-ios-heart.png">
+            </div>
+
+
+        </ion-toolbar>
+    </ion-header>
+
+
+    <div class="header">
+
+        <div class="salon-detail">
+            <h2 class="salon-name">Luxury Life Salon</h2>
+            <p class="salon-address">445 Morgan Camp, New Deltaton, NY, Iran</p>
+            <div class="rating-div">
+                <ion-icon class="orange-start" src="../../../assets/images/General/_ionicons_svg_ios-star.svg"></ion-icon>
+                <ion-icon class="orange-start" src="../../../assets/images/General/_ionicons_svg_ios-star.svg"></ion-icon>
+                <ion-icon class="orange-start" src="../../../assets/images/General/_ionicons_svg_ios-star.svg"></ion-icon>
+                <ion-icon class="white-star" src="../../../assets/images/General/_ionicons_svg_ios-star.svg"></ion-icon>
+                <ion-icon class="white-star" src="../../../assets/images/General/_ionicons_svg_ios-star.svg"></ion-icon>
+                <span class="total-review-lbl">(125 Reviews)</span>
+                <p class="open-label ion-text-uppercase">Open</p>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="section-two">
+        <ion-row class="btn-row ion-text-center">
+            <ion-col size="3">
+                <ion-icon class="icon-website" src="../../../assets/images/General/ic_website.svg"></ion-icon><br />
+                <p>Refresh</p>
+            </ion-col>
+            <ion-col size="3">
+                <ion-icon class="icon-call" src="../../../assets/images/General/ic_end_call.svg"></ion-icon>
+                <p>Call</p>
+            </ion-col>
+            <ion-col size="3">
+                <ion-icon class="icon-direction" src="../../../assets/images/General/noun_Map_2443283.svg"></ion-icon><br />
+                <p>Direction</p>
+            </ion-col>
+            <ion-col size="3">
+                <ion-icon (click)="share()" class="icon-share" src="../../../assets/images/General/ic_share.svg"></ion-icon>
+                <p (click)="share()">Share</p>
+            </ion-col>
+        </ion-row>
+        <h4 class="specialist-title ion-margin-start">Top specialists</h4>
+
+        <ion-row class="ion-padding-start ion-padding-end ion-text-center ion-padding-bottom">
+            <ion-col *ngFor="let i of salonSpecialist" size="3">
+                <div class="img2">
+                    <img src="{{i.img}}">
+                </div>
+                <div style="margin-top: 3px;">
+                    <ion-label>{{i.name}}</ion-label><br>
+                    <ion-text class="sublabel">{{i.sublabel}}</ion-text>
+                </div>
+            </ion-col>
+        </ion-row>
+
+        <ion-segment (ionChange)="segmentChanged($event)">
+            <ion-segment-button mode="md" value="About" checked="true">
+                About
+            </ion-segment-button>
+            <ion-segment-button mode="md" value="Services">
+                Services
+            </ion-segment-button>
+            <ion-segment-button mode="md" value="Gallery">
+                Gallery
+            </ion-segment-button>
+            <ion-segment-button mode="md" value="Review">
+                Review
+            </ion-segment-button>
+        </ion-segment>
+    </div>
+
+    <div class="segment-tabs">
+        <div class="about-div" *ngIf="avtiveSegment == 'About'">
+
+            <p class="about-content">
+                Luxury Life Salon is one of the most powerful brands in the hair & beauty care sector in Northern India, that has given hairstyling a new horizon. <a>Read more</a>
+            </p>
+            <ion-row>
+                <ion-col size="12">
+                    <hr>
+                </ion-col>
+            </ion-row>
+            <h4 class="title">Opening Hours</h4>
+            <ion-row class="ion-no-padding">
+                <ion-col class="dayname" size="6">
+                    <div class="circle"></div>
+                    <ion-text> Monday - Friday</ion-text><br>
+                    <ion-text>8:30 AM - 9:00 PM</ion-text>
+                </ion-col>
+                <ion-col class="dayname" size="6">
+                    <div class="circle"></div>
+                    <ion-text> Saturday - Sunday</ion-text><br>
+                    <ion-text>9:00 AM - 1:00PM</ion-text>
+                </ion-col>
+            </ion-row>
+
+            <ion-row>
+                <ion-col size="12">
+                    <hr>
+                </ion-col>
+            </ion-row>
+            <ion-row class="ion-margin-top">
+                <ion-col size="12" style="padding-left: 0px">
+                    <h4 class="title ion-no-margin">Address</h4>
+                    <ion-text class="address">
+                        88 Richmond Road, Wembley London
+                    </ion-text>
+                    <img style="margin-top:10px;" src="../../../assets/images/Group 6619.png" width="100%">
+                </ion-col>
+
+            </ion-row>
+
+            <ion-row class="ion-padding-start ion-padding-end ion-padding-top">
+                <ion-col size="12">
+                    <ion-button class="btn-continue" mode="md" expand="block" (click)="cart()">
+                        Book
+                    </ion-button>
+                </ion-col>
+            </ion-row>
+        </div>
+        <div class="services-div" *ngIf="avtiveSegment == 'Services'">
+
+            <ion-segment (ionChange)="segmentChanged2($event)">
+                <ion-segment-button mode="ios" value="servic">
+                    Services
+                </ion-segment-button>
+                <ion-segment-button mode="ios" value="packages">
+                    Package & Services
+                </ion-segment-button>
+                <ion-segment-button mode="ios" value="pricetable" checked>
+                    Price Table
+                </ion-segment-button>
+            </ion-segment>
+
+            <div *ngIf="avtiveSegmentt == 'servic'" class="hair">
+
+                <ion-row *ngFor="let h of hairStyle">
+                    <ion-col size="12">
+                        <div class="item">
+                            <ion-item class="ion-no-padding" lines="none">
+                                <div class="{{h.class}}"></div>
+                                <img src="{{h.img}}">
+                                <div class="text">
+                                    <ion-text class="style">{{h.hair}}</ion-text><br>
+                                    <ion-text class="serv">{{h.service}}</ion-text>
+                                </div>
+                                <div class="view" slot="end">
+                                    <ion-text class="view">View</ion-text>
+                                </div>
+                            </ion-item>
+                        </div>
+                    </ion-col>
+                </ion-row>
+            </div>
+
+            <div *ngIf="avtiveSegmentt == 'packages'">
+                <ion-row *ngFor="let p of package" class="ion-margin-top packages">
+                    <ion-col size="12">
+                        <img src="{{p.img}}" width="100%"><br>
+                        <ion-row>
+                            <ion-col size="9">
+                                <ion-text class="heading">{{p.heading}}</ion-text><br>
+                                <ion-text class="subheading">{{p.complet}}</ion-text>
+                            </ion-col>
+                            <ion-col size="3" class="ion-text-end">
+                                <ion-text class="book-now">{{p.book}}</ion-text><br>
+                                <ion-text class="price">{{p.price}}</ion-text>
+                            </ion-col>
+                        </ion-row>
+                        <hr>
+                    </ion-col>
+                </ion-row>
+            </div>
+
+            <div *ngIf="avtiveSegmentt == 'pricetable'">
+                <ion-row class="ion-margin-top price">
+                    <ion-col size="12">
+                        <div style="margin-bottom: 8px;">
+                            <ion-text class="heading">Hand & Foot Care</ion-text><br>
+                        </div>
+                        <ion-item *ngFor="let c of checkBox1" class="ion-no-padding" lines="none">
+                            <ion-checkbox class="ion-no-padding" mode="md" [(ngModel)]="c.isChecked"></ion-checkbox>
+                            <ion-text class="head">{{c.val}}</ion-text>
+                            <ion-text class="price" slot="end">{{c.price}}</ion-text>
+                        </ion-item>
+                    </ion-col>
+                </ion-row>
+
+                <ion-row class="ion-margin-top price">
+                    <ion-col size="12">
+                        <div style="margin-bottom: 8px;">
+                            <ion-text class="heading">Waxing</ion-text><br>
+                        </div>
+                        <ion-item *ngFor="let c of checkBox2" class="ion-no-padding" lines="none">
+                            <ion-checkbox class="ion-no-padding" mode="md" [(ngModel)]="c.isChecked"></ion-checkbox>
+                            <ion-text class="head">{{c.val}}</ion-text>
+                            <ion-text class="price" slot="end">{{c.price}}</ion-text>
+                        </ion-item>
+                    </ion-col>
+                </ion-row>
+
+                <ion-row class="total ion-padding-top ion-margin-top ion-margin-bottom ion-padding-bottom">
+                    <ion-col size="8">
+                        <ion-text class="tot">Total Services</ion-text><br>
+                        <ion-text class="tot">Total Payable</ion-text>
+                    </ion-col>
+                    <ion-col size="4" class="ion-text-end">
+                        <ion-text class="price">6</ion-text><br>
+                        <ion-text class="price">$144</ion-text>
+                    </ion-col>
+                </ion-row><br>
+                <ion-row class="ion-padding-start ion-padding-end ion-padding-top">
+                    <ion-col size="12">
+                        <ion-button class="btn-continue" mode="md" expand="block" (click)="cart()">
+                            Continue
+                        </ion-button>
+                    </ion-col>
+                </ion-row>
+            </div>
+
+
+
+        </div>
+        <div class="gallery-div " *ngIf="avtiveSegment=='Gallery' ">
+
+            <ion-row class="imagegallary ion-margin-top" style="margin-bottom: 10px;">
+                <ion-col size="12">
+                    <ion-row class="firstrow">
+                        <ion-col size="4">
+                            <img src="http://placehold.it/114x114" height="114px" width="100%">
+                            <img src="http://placehold.it/114x114" height="114px" width="100%">
+                        </ion-col>
+                        <ion-col size="8">
+                            <img src="http://placehold.it/236x236" height="236px" width="100%">
+                        </ion-col>
+                    </ion-row>
+                    <ion-row>
+                        <ion-col size="12">
+                            <img style="border-radius: 5px;" src="http://placehold.it/359x113" width="100%">
+                        </ion-col>
+                    </ion-row>
+                    <ion-row class="firstrow">
+                        <ion-col size="8">
+                            <img src="http://placehold.it/236x236" height="236px" width="100%">
+                        </ion-col>
+                        <ion-col size="4">
+                            <img src="http://placehold.it/114x114" height="114px" width="100%">
+                            <img src="http://placehold.it/114x114" height="114px" width="100%">
+                        </ion-col>
+                    </ion-row>
+                </ion-col>
+            </ion-row>
+        </div>
+        <div class="review-div " *ngIf="avtiveSegment=='Review' ">
+            <ion-row class="ion-padding-start ion-padding-end">
+                <ion-col size="12" class="itemm">
+                    <h3>Write your review</h3>
+                    <ion-item class="ion-no-padding" lines="none">
+                        <ion-input placeholder="Write your expirience......"></ion-input>
+                    </ion-item>
+                </ion-col>
+            </ion-row>
+            <ion-row class="ion-padding-start ion-padding-end ion-padding-top">
+                <ion-col size="8">
+                    <span class="rating">
+                        <ion-icon [ngClass]="{ selected: activeStar>= 1 }" (click)="setRating(1)" src="../../../assets/images/General/_ionicons_svg_ios-star.svg">
+                                     </ion-icon>
+                            <ion-icon [ngClass]="{ selected: activeStar >= 2 }" (click)="setRating(2)" src="../../../assets/images/General/_ionicons_svg_ios-star.svg"></ion-icon>
+                            <ion-icon [ngClass]="{ selected: activeStar >= 3 }" (click)="setRating(3)" src="../../../assets/images/General/_ionicons_svg_ios-star.svg"></ion-icon>
+                            <ion-icon [ngClass]="{ selected: activeStar >= 4 }" (click)="setRating(4)" src="../../../assets/images/General/_ionicons_svg_ios-star.svg"></ion-icon>
+                            <ion-icon [ngClass]="{ selected: activeStar >= 5 }" (click)="setRating(5)" src="../../../assets/images/General/_ionicons_svg_ios-star.svg"></ion-icon>
+                            </span>
+                </ion-col>
+                <ion-col size="4" class="ion-text-end">
+                    <ion-button class="btn-post" size="small" mode="md">Post</ion-button>
+                </ion-col>
+            </ion-row>
+            <div style="margin-top: 8px;">
+                <hr>
+            </div>
+
+            <ion-row class="ion-padding-start ion-padding-end">
+                <ion-col size="12">
+                    <h3>All Review (326)</h3><br>
+                    <ion-row>
+                        <ion-col size="12">
+                            <ion-item style="--ion-padding-end:0px;margin-bottom: 10px;" class="ion-no-padding" lines="none">
+                                <img height="40px" width="40px" src="http://placehold.it/40X40">&nbsp;&nbsp;&nbsp;
+                                <div>
+                                    <ion-text class="name">Jacob Sullivan</ion-text><br>
+                                    <span class="stars">
+                                    <ion-icon 
+                                      src="../../../assets/images/General/_ionicons_svg_ios-star.svg"></ion-icon>
+                                    <ion-icon 
+                                      src="../../../assets/images/General/_ionicons_svg_ios-star.svg"></ion-icon>
+                                    <ion-icon 
+                                      src="../../../assets/images/General/_ionicons_svg_ios-star.svg"></ion-icon>
+                                    <ion-icon 
+                                      src="../../../assets/images/General/_ionicons_svg_ios-star.svg"></ion-icon>
+                                    <ion-icon 
+                                      src="../../../assets/images/General/_ionicons_svg_ios-star.svg"></ion-icon>
+                                  </span>
+                                </div>
+                                <div style="margin-top: -20px;" slot="end">
+                                    <ion-text class="time">30 min ago</ion-text>
+                                </div>
+                            </ion-item>
+                            <p class="text ion-text-justify">
+                                I have had two cuts with Nick, and both outcomes have been above and beyond what was expected! Great service, comfortable atmosphere, experienced staff, and very competitive prices. Highly recommended!
+                            </p>
+                            <hr>
+                        </ion-col>
+                    </ion-row>
+
+                    <ion-row>
+                        <ion-col size="12">
+                            <ion-item style="--ion-padding-end:0px;margin-bottom: 10px;" class="ion-no-padding" lines="none">
+                                <img height="40px" width="40px" src="http://placehold.it/40X40">&nbsp;&nbsp;&nbsp;
+                                <div>
+                                    <ion-text class="name">Nency Marshal</ion-text><br>
+                                    <span class="stars">
+                                    <ion-icon 
+                                      src="../../../assets/images/General/_ionicons_svg_ios-star.svg"></ion-icon>
+                                    <ion-icon 
+                                      src="../../../assets/images/General/_ionicons_svg_ios-star.svg"></ion-icon>
+                                    <ion-icon 
+                                      src="../../../assets/images/General/_ionicons_svg_ios-star.svg"></ion-icon>
+                                    <ion-icon 
+                                      src="../../../assets/images/General/_ionicons_svg_ios-star.svg"></ion-icon>
+                                    <ion-icon 
+                                      src="../../../assets/images/General/_ionicons_svg_ios-star.svg"></ion-icon>
+                                  </span>
+                                </div>
+                                <div style="margin-top: -20px;" slot="end">
+                                    <ion-text class="time">30 min ago</ion-text>
+                                </div>
+                            </ion-item>
+                            <p class="text ion-text-justify">
+                                I have had two cuts with Nick, and both outcomes have been above and beyond what was expected! Great service, comfortable atmosphere, experienced staff, and very competitive prices. Highly recommended!
+                            </p>
+                            <hr>
+                        </ion-col>
+                    </ion-row>
+
+
+                </ion-col>
+            </ion-row>
+
+            <ion-item class="ion-padding-start ion-padding-end lastitem" lines="none">
+                <ion-text class="name" slot="start">View all</ion-text>
+                <ion-text class="name" slot="end">326</ion-text>
+            </ion-item>
+
+        </div>
+    </div>
+</ion-content>

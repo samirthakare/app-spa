@@ -1,0 +1,99 @@
+ion-header {
+    ion-toolbar {
+        .name-part {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 14px;
+            .username {
+                margin: 0;
+                font-size: 17px;
+                font-family: tofini_bold;
+            }
+        }
+        .location-part {
+            ion-icon {
+                margin-right: 5px;
+            }
+            span {
+                font-size: 12px;
+                font-family: tofini_medium;
+                color: var(--ion-color-simpleDark);
+            }
+            .inline {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                .city_name {
+                    font-size: 15px;
+                    font-family: tofini_medium;
+                    margin: 0;
+                    display: flex;
+                    align-items: center;
+                    margin-top: 5px;
+                }
+                ion-button {
+                    ion-icon {
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+        ion-searchbar {
+            padding: 0;
+            font-size: 16px;
+            font-family: tofini_medium;
+            margin-top: 10px;
+        }
+    }
+}
+
+ion-content {
+    .headers {
+        display: flex;
+        justify-content: space-between;
+        .heading {
+            font-size: 20px;
+            font-family: 'tofini_bold';
+            margin: 0;
+        }
+        .viewbtn {
+            font-size: 14px;
+            font-family: tofini_medium;
+            color: var(--ion-color-simpleDark);
+            text-transform: capitalize;
+        }
+    }
+    .serviceWrapper {
+        display: -webkit-box;
+        overflow: scroll;
+        margin-top: 17px;
+        .services {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin-right: 12px;
+            img {
+                height: 64px;
+                width: 64px;
+                margin-bottom: 10px;
+            }
+            h2 {
+                margin: 0;
+                font-size: 14px;
+                font-family: tofini_medium;
+                margin-bottom: 4px;
+            }
+            p {
+                margin: 0;
+                font-size: 11px;
+                font-family: tofini_regular;
+            }
+        }
+    }
+    .serviceWrapper::-webkit-scrollbar {
+        width: 0px;
+        background: transparent;
+    }
+}

@@ -1,0 +1,124 @@
+ion-toolbar {
+    .salon-detail {
+        position: absolute;
+        bottom: 3%;
+        padding: 1px 16px 16px;
+        margin-top: 7.6rem;
+        background: rgba(2, 3, 3, 0);
+        .salon-name {
+            font-family: "fivo-bold";
+            color: var(--ion-color-white);
+            margin-bottom: 0px;
+            margin-top: 60px;
+        }
+        .salon-address {
+            font-size: 13px;
+            font-family: "fivo-regular";
+            color: var(--ion-color-white);
+            margin-top: 0px;
+        }
+        .rating-div {
+            position: relative;
+            ion-icon {
+                font-size: 20px;
+                margin-bottom: -5px;
+            }
+            .white-star {
+                color: var(--ion-color-white);
+            }
+            .orange-start {
+                color: var(--star-color);
+            }
+            .total-review-lbl {
+                font-size: 12px;
+                font-family: "fivo-regular";
+                margin-left: 12px;
+                color: var(--ion-color-white);
+            }
+        }
+        .open-label {
+            color: var(--ion-color-green);
+            width: fit-content;
+            border: 1px solid var(--ion-color-green);
+            font-size: 12px;
+            padding: 3px 8px 2px 7px;
+            border-radius: 3px;
+            font-family: "tofini_medium";
+            bottom: -3px;
+            position: absolute;
+            right: 0px;
+            margin: 0px;
+        }
+    }
+}
+
+.top {
+    position: absolute;
+    top: 8%;
+    left: 20px;
+}
+
+.top-right {
+    right: 20px;
+    position: absolute;
+    top: 8%;
+}
+
+.heading-bold {
+    font-size: 20px;
+    color: var(--ion-black-light-color);
+    font-family: 'fivo-bold';
+}
+
+.com {
+    font-size: 14px;
+    color: var(--ion-black-light-color);
+    font-family: 'fivo-regular';
+}
+
+.com2 {
+    font-size: 16px;
+    margin-left: 10px;
+    color: var(--ion-black-light-color);
+    font-family: 'fivo-regular';
+}
+
+.text {
+    font-size: 14px;
+    color: var(--ion-black-light-2-color);
+    font-family: 'fivo-regular';
+    text-align: justify;
+}
+
+.total {
+    font-size: 16px;
+    color: var(--ion-color-orange);
+    font-family: 'fivo-regular';
+}
+
+.heading2-bold {
+    font-size: 18px;
+    color: var(--ion-black-light-color);
+    font-family: 'fivo-bold';
+}
+
+hr {
+    border: 0.5px solid #91B4D8;
+    opacity: 0.2;
+}
+
+ion-item {
+    --inner-padding-start: 25px;
+    --inner-padding-end: 17px;
+}
+
+.btn-continue {
+    --color: var(--ion-color-white);
+    height: 44px;
+    /* margin: 35px 8px 20px 8px; */
+    font-size: 15px;
+    --box-shadow: none;
+    font-family: "tofini_regular";
+    --background: var(--ion-color-gradiant);
+    text-transform: inherit;
+}

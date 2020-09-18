@@ -1,0 +1,198 @@
+ion-toolbar {
+    --background: transparent;
+    --ion-color-base: transparent !important;
+    transform-style: flat;
+    transition: background-color 0.5s ease-in 0.5s;
+    ion-button {
+        --padding-start: 0px;
+        --padding-end: 0px;
+        --ripple-color: var(--ion-color-white);
+        .back-icon {
+            width: 23.74px;
+            height: 20px;
+        }
+        .bookmark-icon {
+            width: 17px;
+            height: 24px;
+            color: #FF3939;
+        }
+    }
+}
+
+.header {
+    background-image: url("http://placehold.it/375x289");
+    height: 289px;
+    position: relative;
+}
+
+ion-content {
+    --background: none;
+    background-repeat: no-repeat;
+    background-size: 100% 290px;
+    ion-header {
+        position: fixed;
+        top: 0px;
+        left: 0px;
+    }
+    .salon-detail {
+        padding: 1px 16px 16px;
+        position: absolute;
+        background: rgba(2, 3, 3, 0);
+        margin-top: 131px;
+        .salon-name {
+            font-family: "fivo-bold";
+            color: var(--ion-color-white);
+            margin-bottom: 0px;
+            margin-top: 60px;
+        }
+        .salon-address {
+            font-size: 13px;
+            font-family: "fivo-regular";
+            color: var(--ion-color-white);
+            margin-top: 0px;
+        }
+        .rating-div {
+            position: relative;
+            ion-icon {
+                font-size: 20px;
+                margin-bottom: -5px;
+            }
+            .white-star {
+                color: var(--ion-color-white);
+            }
+            .orange-start {
+                color: var(--star-color);
+            }
+            .total-review-lbl {
+                font-size: 12px;
+                font-family: "fivo-regular";
+                margin-left: 12px;
+                color: var(--ion-color-white);
+            }
+        }
+        .open-label {
+            color: var(--ion-color-green);
+            width: fit-content;
+            border: 1px solid var(--ion-color-green);
+            font-size: 12px;
+            padding: 3px 8px 2px 7px;
+            border-radius: 3px;
+            font-family: "tofini_medium";
+            bottom: -3px;
+            position: absolute;
+            right: 0px;
+            margin: 0px;
+        }
+    }
+}
+
+.gender-section {
+    .title {
+        margin-bottom: 0px;
+        font-size: 16px;
+        font-family: 'fivo-medium';
+        color: var(--ion-black-light-color);
+    }
+    ion-label {
+        color: var(--ion-black-light-2-color);
+    }
+    ion-radio {
+        --border-width: 1px;
+        --color: var(--ion-black-light-color);
+        --color-checked: var(--ion-color-orange);
+        margin-right: 11px;
+    }
+    .active {
+        font-size: 16px;
+        font-family: 'fivo-regular';
+        color: var(--ion-color-orange);
+    }
+    .inactive {
+        font-size: 16px;
+        font-family: 'fivo-regular';
+        color: var(--ion-color-orange);
+    }
+}
+
+.service {
+    font-size: 18px;
+    color: var(--ion-black-light-color);
+    font-family: "fivo-bold";
+}
+
+.total {
+    font-size: 18px;
+    color: var(--ion-color-orange);
+    font-family: 'fivo-medium';
+}
+
+.tx {
+    font-size: 14px;
+    color: var(--ion-black-light-2-color);
+}
+
+.facility {
+    font-size: 16px;
+    color: var(--ion-black-light-color);
+    font-family: 'fivo-medium';
+}
+
+.price {
+    font-size: 14px;
+    color: var(--ion-black-light-color);
+    font-family: 'fivo-medium';
+    span {
+        font-size: 15px;
+        color: var(--ion-color-orange);
+    }
+}
+
+.facility2 {
+    width: 200px;
+    height: 38px;
+    background-color: var(--fill-color);
+    color: var(--ion-black-light-color);
+    border-radius: 5px;
+    text-align: center;
+    margin-top: 5px;
+    padding: 8px;
+    ion-text {
+        font-size: 14px;
+    }
+}
+
+hr {
+    border: 0.5px solid #91B4D8;
+    opacity: 0.2;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 14px;
+}
+
+.name {
+    font-size: 15px;
+    font-family: 'fivo-medium';
+    color: var(--ion-black-light-color);
+}
+
+.top {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+}
+
+.top-right {
+    right: 20px;
+    position: absolute;
+    top: 50%;
+}
+
+.btn-continue {
+    --color: var(--ion-color-white);
+    height: 44px;
+    font-size: 15px;
+    --box-shadow: none;
+    font-family: "tofini_regular";
+    --background: var(--ion-color-gradiant);
+    text-transform: inherit;
+}

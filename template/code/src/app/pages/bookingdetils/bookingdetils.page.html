@@ -1,0 +1,102 @@
+<ion-content>
+    <ion-header no-border>
+        <ion-toolbar mode="ios" class="ion-no-padding">
+            <img (click)="goBack()" src="../../../assets/b.png">
+            <ion-title>Booking Details</ion-title>
+        </ion-toolbar>
+    </ion-header>
+    <ion-grid class="ion-no-padding">
+        <ion-row class="ion-padding first">
+            <ion-col size="12">
+                <ion-item class="ion-no-padding" lines="none" style="margin-bottom: 10px;">
+                    <img src="http://placehold.it/100X90" height="90px" width="100px" style="border-radius: 8px;">
+                    <div style="margin-left: 15px;">
+                        <ion-text class="heading">Luxury Lide Salon</ion-text><br>
+                        <ion-text class="address">88 Richmod Road, London</ion-text><br>
+                        <ion-icon src="../../../assets/images/General/_ionicons_svg_ios-star.svg"></ion-icon>&nbsp;
+                        <span class="distance">4.0</span>&nbsp; &nbsp;
+                        <ion-text class="distance">1.2Km</ion-text><br>
+                        <ion-text class="total">Total : </ion-text>&nbsp;
+                        <ion-text class="price">$320.00</ion-text>
+                    </div>
+                </ion-item>
+                <ion-text class="service">Service : &nbsp;<span style="text-align: justify;">Pedicure & Manicure, Paraffin 
+                Treatment, Eyebrow, Full Arm...</span></ion-text><br>
+                <ion-text class="service">Date & Time : &nbsp;<span>Monday, 25 May 2020, 1:00pm</span></ion-text>
+            </ion-col>
+        </ion-row>
+        <ion-row class="ion-padding-start ion-padding-end">
+            <ion-col size="12">
+                <ion-text class="h3">Payment Method</ion-text>
+            </ion-col>
+        </ion-row>
+        <ion-row class="ion-padding">
+            <ion-col size="4">
+                <ion-button mode="ios" class="btn">Card</ion-button>
+            </ion-col>
+            <ion-col size="4">
+                <ion-button mode="ios" class="inactive">PayPal</ion-button>
+            </ion-col>
+            <ion-col size="4">
+                <ion-button mode="ios" class="inactive">Stripe</ion-button>
+            </ion-col>
+        </ion-row>
+        <div class="item">
+            <ion-row class="ion-padding-start ion-padding-end">
+                <ion-col size="8">
+                    <ion-text class="h3">Card</ion-text>
+                </ion-col>
+                <ion-col size="4" class="ion-text-end">
+                    <ion-text class="addcard">Add Card</ion-text>
+                </ion-col>
+            </ion-row>
+            <ion-row class="ion-padding-start ion-padding-end">
+                <ion-col size="12">
+                    <ion-item class="ion-no-padding" lines="none">
+                        <ion-input placeholder="xxxx &nbsp; xxxx &nbsp; xxxx &nbsp;1289"></ion-input>
+                        <ion-radio-group mode="md" slot="end">
+                            <ion-radio value="helo" mode="md"></ion-radio>
+                        </ion-radio-group>
+                    </ion-item><br>
+                    <ion-label position="stacked" class="sublabel">CARD NUMBER</ion-label>
+                    <ion-item class="ion-no-padding" lines="none">
+                        <ion-input placeholder="4319 &nbsp;&nbsp;  5312 &nbsp;&nbsp;  0215  &nbsp;&nbsp;  1289"></ion-input>
+                        <img src="../../../assets/visa_PNG30.png" slot="end">
+                    </ion-item>
+                </ion-col>
+            </ion-row>
+            <br>
+            <ion-row class="ion-padding-start ion-padding-end">
+                <ion-col size="7" class="ion-padding-end">
+                    <ion-label position="stacked" class="sublabel">EXPIRATION DATE</ion-label>
+                    <ion-item class="ion-no-padding " lines="none">
+                        <ion-input placeholder="09 / 22"></ion-input>
+                    </ion-item>
+                </ion-col>
+                <ion-col size="5" class="ion-padding-start">
+                    <ion-label position="stacked" class="sublabel">CVV</ion-label>
+                    <ion-item class="ion-no-padding" lines="none">
+                        <ion-input placeholder="***"></ion-input>
+                    </ion-item>
+                </ion-col>
+            </ion-row>
+            <br>
+            <ion-row class="ion-padding-start ion-padding-end">
+                <ion-col size="12">
+                    <ion-label position="stacked" class="sublabel">CARD HOLDER'S NAME</ion-label>
+                    <ion-item class="ion-no-padding " lines="none">
+                        <ion-input placeholder="Amanda Cunningham"></ion-input>
+                    </ion-item>
+                </ion-col>
+            </ion-row>
+            <ion-row class="ion-padding-start ion-padding-end ion-padding-top">
+                <ion-col size="12">
+                    <ion-button class="btn-continue" mode="md" expand="block" (click)="presentModal()">
+                        Pay $320.00
+                    </ion-button>
+                </ion-col>
+            </ion-row>
+        </div>
+
+    </ion-grid>
+</ion-content>

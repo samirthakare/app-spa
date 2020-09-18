@@ -1,0 +1,129 @@
+.first {
+    .h2 {
+        font-size: 16px;
+        font-family: 'fivo-regular';
+        color: white;
+    }
+    .address {
+        font-size: 13px;
+        color: white;
+        font-family: 'fivo-regular';
+    }
+    h1 {
+        font-size: 'fivo-medium';
+        font-size: 20px;
+        color: white;
+    }
+    ion-item {
+        --border-radius: 5px;
+        ion-input {
+            --padding-start: 20px;
+            --placeholder-color: var(--ion-black-light-2-color);
+            font-size: 16px;
+            color: var(--ion-black-light-color);
+            /* font-family: 'fivo-oblique'; */
+        }
+    }
+}
+
+.imgss {
+    background-image: url('http://placehold.it/375x268');
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+
+.img2 {
+    height: 70px;
+    width: 70px;
+    border: 0.5px solid var(--ion-border-color);
+    padding: 5px;
+    border-radius: 5px;
+}
+
+ion-label {
+    color: #265E9E;
+    font-size: 12.5px;
+    /* padding-top: 12px; */
+    font-family: "fivo-regular";
+}
+
+.head {
+    font-size: 22px;
+    color: #265E9E;
+    font-family: 'fivo-bold';
+    margin-bottom: 5px;
+}
+
+.salonList-row {
+    position: absolute;
+    /* bottom: 10px; */
+    left: 10px;
+    margin-top: 5px;
+    overflow-x: scroll;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+    .salon-section {
+        background: var(--ion-color-white);
+        border-radius: 10px;
+        box-shadow: 0px 3px 8px #dbdbdb;
+        height: 189 px;
+        border: 1px solid var(--ion-border-color);
+        .salon-image {
+            height: 100px;
+            width: 100%;
+            border-radius: 10px 10px 0px 0px;
+            img {
+                border-radius: 10px 10px 0px 0px;
+                height: 140px;
+                width: 100%;
+            }
+        }
+        .salon-detail {
+            padding-left: 14px;
+            display: flow-root;
+            .salon-name {
+                font-size: 15px;
+                font-family: "fivo-regular";
+                color: #265E9E;
+                margin-top: 46px;
+                margin-bottom: 5px;
+                padding-right: 11px;
+                .start-span {
+                    font-size: 13px;
+                    color: #91B4D8;
+                    img {
+                        margin-right: 5px;
+                    }
+                }
+            }
+            .salon-address {
+                font-size: 13px;
+                font-family: "fivo-regular";
+                margin-top: 0px;
+                margin-bottom: 1px;
+                color: #91B4D8;
+                padding-right: 11px;
+            }
+            .btn-book {
+                font-size: 13px;
+                font-family: "tofini_medium";
+                text-transform: initial;
+                --box-shadow: none;
+                height: 30px;
+                margin: 0px;
+                --border-radius: 8px 0px 8px 0px;
+                --padding-start: 17px;
+                --padding-end: 15px;
+            }
+        }
+    }
+}
+
+.iconlast {
+    position: absolute;
+    bottom: 15px;
+    right: 1px;
+}

@@ -1,0 +1,143 @@
+<ion-header no-border>
+    <ion-toolbar>
+        <ion-buttons slot="start" class="ion-margin-start">
+            <ion-button class="ion-margin-left" fill="clear" mode="md" (click)="backPage()">
+                <ion-icon class="back-icon" src="../../../assets/images/General/noun_Arrow_white_1256499.svg"></ion-icon>
+            </ion-button>
+        </ion-buttons>
+
+        <ion-buttons slot="end" class="ion-margin-end">
+            <ion-button fill="clear" mode="md" (click)="bookmark()">
+                <ion-icon class="bookmark-icon" src="../../../assets/images/General/noun_bookmark_660526.svg"></ion-icon>
+            </ion-button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+<div class="salon-detail">
+    <h2 class="salon-name">Luxury Life Salon</h2>
+    <p class="salon-address">445 Morgan Camp, New Deltaton, NY, Iran</p>
+    <div class="rating-div">
+        <ion-icon class="orange-start" src="../../../assets/images/General/_ionicons_svg_ios-star.svg"></ion-icon>
+        <ion-icon class="orange-start" src="../../../assets/images/General/_ionicons_svg_ios-star.svg"></ion-icon>
+        <ion-icon class="orange-start" src="../../../assets/images/General/_ionicons_svg_ios-star.svg"></ion-icon>
+        <ion-icon class="white-star" src="../../../assets/images/General/_ionicons_svg_ios-star.svg"></ion-icon>
+        <ion-icon class="white-star" src="../../../assets/images/General/_ionicons_svg_ios-star.svg"></ion-icon>
+        <span class="total-review-lbl">(125 Reviews)</span>
+        <p class="open-label ion-text-uppercase">Open</p>
+    </div>
+</div>
+
+<ion-content fullscreen>
+    <div class="main-containt">
+        <div class="scroll-div">
+            <div class="gender-section">
+                <h4 class="title">Gender</h4>
+                <ion-radio-group (ionChange)="changeGenderValue($event)">
+                    <ion-row class="ion-no-padding">
+                        <ion-col class="ion-no-padding">
+                            <ion-item class="ion-no-padding" lines="none">
+                                <ion-label [class.active]="gender == 'Man'">Man</ion-label>
+                                <ion-radio slot="start" mode="md" value="Man" checked></ion-radio>
+                            </ion-item>
+                        </ion-col>
+                        <ion-col class="ion-no-padding">
+                            <ion-item class="ion-no-padding" lines="none">
+                                <ion-label [class.active]="gender == 'Woman'">Woman</ion-label>
+                                <ion-radio slot="start" mode="md" value="Woman"></ion-radio>
+                            </ion-item>
+                        </ion-col>
+                        <ion-col class="ion-no-padding">
+                            <ion-item class="ion-no-padding" lines="none">
+                                <ion-label>Other</ion-label>
+                                <ion-radio slot="start" mode="md" value="Other"></ion-radio>
+                            </ion-item>
+                        </ion-col>
+                    </ion-row>
+                </ion-radio-group>
+            </div>
+            <h4 class="title" style="margin-bottom: 10px">Choose your service <span class="ion-float-right total-label">Total:
+          $15.00</span></h4>
+            <ion-row nowrap class="ion-no-padding employee-row">
+                <ion-col size="5">
+                    <p class="service-label">Hair cut</p>
+                </ion-col>
+                <ion-col size="7">
+                    <ion-select interface="alert" [interfaceOptions]="selectOp1" placeholder="Select type" class="select">
+                        <ion-select-option value="f">Test</ion-select-option>
+                        <ion-select-option value="m">Test</ion-select-option>
+                    </ion-select>
+                </ion-col>
+            </ion-row>
+            <ion-row nowrap class="ion-no-padding employee-row">
+                <ion-col size="5">
+                    <p class="service-label">Spa</p>
+                </ion-col>
+                <ion-col size="7">
+                    <ion-select [interfaceOptions]="selectOp2" placeholder="Select type" class="select">
+                        <ion-select-option value="f">Test</ion-select-option>
+                        <ion-select-option value="m">Test</ion-select-option>
+                    </ion-select>
+                </ion-col>
+            </ion-row>
+            <ion-row nowrap class="ion-no-padding employee-row">
+                <ion-col size="5">
+                    <p class="service-label">Make up</p>
+                </ion-col>
+                <ion-col size="7">
+                    <ion-select [interfaceOptions]="selectOp3" placeholder="Select type" class="select">
+                        <ion-select-option value="f">Test</ion-select-option>
+                        <ion-select-option value="m">Test</ion-select-option>
+                    </ion-select>
+                </ion-col>
+            </ion-row>
+            <ion-row nowrap class="ion-no-padding employee-row">
+                <ion-col size="5">
+                    <p class="service-label">Facial</p>
+                </ion-col>
+                <ion-col size="7">
+                    <ion-select [interfaceOptions]="selectOp4" placeholder="Select type" class="select">
+                        <ion-select-option value="f">Test</ion-select-option>
+                        <ion-select-option value="m">Test</ion-select-option>
+                    </ion-select>
+                </ion-col>
+            </ion-row>
+            <ion-row nowrap class="ion-no-padding employee-row">
+                <ion-col size="5">
+                    <p class="service-label">Hair color</p>
+                </ion-col>
+                <ion-col size="7">
+                    <ion-select [interfaceOptions]="selectOp5" placeholder=" Select type" class="select">
+                        <ion-select-option value="f">Test</ion-select-option>
+                        <ion-select-option value="m">Test</ion-select-option>
+                    </ion-select>
+                </ion-col>
+            </ion-row>
+            <ion-row nowrap class="ion-no-padding employee-row">
+                <ion-col size="5">
+                    <p class="service-label">Bridal</p>
+                </ion-col>
+                <ion-col size="7">
+                    <ion-select [interfaceOptions]="selectOp6" placeholder="Select type" class="select">
+                        <ion-select-option value="f">Test</ion-select-option>
+                        <ion-select-option value="m">Test</ion-select-option>
+                    </ion-select>
+                </ion-col>
+            </ion-row>
+            <ion-row nowrap class="ion-no-padding employee-row">
+                <ion-col size="5">
+                    <p class="service-label">Nail</p>
+                </ion-col>
+                <ion-col size="7">
+                    <ion-select [interfaceOptions]="selectOp7" placeholder="Select type" class="select">
+                        <ion-select-option value="f">Test</ion-select-option>
+                        <ion-select-option value="m">Test</ion-select-option>
+                    </ion-select>
+                </ion-col>
+            </ion-row>
+            <ion-button class="btn-continue" mode="md" expand="full" shape="round" fill="solid" (click)="continue()">
+                Continue
+            </ion-button>
+        </div>
+    </div>
+</ion-content>

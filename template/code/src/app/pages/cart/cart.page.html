@@ -1,0 +1,111 @@
+<ion-content [scrollEvents]="true" (ionScroll)="logScrolling($event)">
+    <ion-header no-border>
+        <ion-toolbar [style.backgroundColor]="state == 1 ? '' : 'rgba(0,0,0,0.7)'">
+            <div class="top">
+                <img (click)="goBack()" src="../../../assets/Icon ionic-ios-arrow-back.png">
+            </div>
+            <div class="top-right">
+                <img src="../../../assets/Icon ionic-ios-heart.png">
+            </div>
+        </ion-toolbar>
+    </ion-header>
+
+
+    <div class="header">
+        <div class="salon-detail">
+            <h2 class="salon-name">Luxury Life Salon</h2>
+            <p class="salon-address">445 Morgan Camp, New Deltaton, NY, Iran</p>
+            <div class="rating-div">
+                <ion-icon class="orange-start" src="../../../assets/images/General/_ionicons_svg_ios-star.svg"></ion-icon>
+                <ion-icon class="orange-start" src="../../../assets/images/General/_ionicons_svg_ios-star.svg"></ion-icon>
+                <ion-icon class="orange-start" src="../../../assets/images/General/_ionicons_svg_ios-star.svg"></ion-icon>
+                <ion-icon class="white-star" src="../../../assets/images/General/_ionicons_svg_ios-star.svg"></ion-icon>
+                <ion-icon class="white-star" src="../../../assets/images/General/_ionicons_svg_ios-star.svg"></ion-icon>
+                <span class="total-review-lbl">(125 Reviews)</span>
+                <p class="open-label ion-text-uppercase">Open</p>
+            </div>
+        </div>
+    </div>
+
+
+    <ion-row class="ion-padding-start ion-padding-end ion-padding-top">
+        <ion-col size="12">
+            <div class="gender-section">
+                <h4 class="title">Gender</h4>
+                <ion-radio-group (ionChange)="changeGenderValue($event)">
+                    <ion-row class="ion-no-padding">
+                        <ion-col class="ion-no-padding">
+                            <ion-item class="ion-no-padding" lines="none">
+                                <ion-label [class.active]="gender == 'Man'">Man</ion-label>
+                                <ion-radio slot="start" mode="md" value="Man" checked></ion-radio>
+                            </ion-item>
+                        </ion-col>
+                        <ion-col class="ion-no-padding">
+                            <ion-item class="ion-no-padding" lines="none">
+                                <ion-label [class.active]="gender == 'Woman'">Woman</ion-label>
+                                <ion-radio slot="start" mode="md" value="Woman"></ion-radio>
+                            </ion-item>
+                        </ion-col>
+                        <ion-col class="ion-no-padding">
+                            <ion-item class="ion-no-padding" lines="none">
+                                <ion-label>Other</ion-label>
+                                <ion-radio slot="start" mode="md" value="Other"></ion-radio>
+                            </ion-item>
+                        </ion-col>
+                    </ion-row>
+                </ion-radio-group>
+            </div>
+        </ion-col>
+    </ion-row>
+
+    <ion-row class="ion-padding-start ion-padding-end">
+        <ion-col size="8">
+            <ion-text class="service">Selected Services </ion-text>
+        </ion-col>
+        <ion-col size="4">
+            <ion-text class="total">Total : $144</ion-text>
+        </ion-col>
+    </ion-row>
+
+    <ion-row class="ion-padding-start ion-padding-end">
+        <ion-col size="12">
+            <ion-text class="tx">If you add service then press to (+) and (-) to press delete icon.</ion-text>
+        </ion-col>
+    </ion-row>
+    <ion-row *ngFor="let f of facility">
+        <ion-col size="12">
+            <ion-row style="margin-top: -7px;" class="ion-padding-start ion-padding-end">
+                <ion-col size="5">
+                    <ion-text class="facility">{{f.style}}</ion-text> <br>
+                    <ion-text class="price">{{f.pri}}&nbsp;&nbsp;&nbsp;<span>( + )</span></ion-text>
+                </ion-col>
+                <ion-col size="7">
+                    <div class="facility2">
+                        <ion-text>{{f.des}}</ion-text>
+                    </div>
+                </ion-col>
+            </ion-row>
+            <hr>
+        </ion-col>
+    </ion-row>
+
+
+    <ion-row class="ion-padding-start ion-padding-end ion-margin-bottom" style="background-color: var(--fill-color);">
+        <ion-col size="8">
+            <ion-text class="name">Total Service</ion-text><br>
+            <ion-text class="name">Total Payable</ion-text>
+        </ion-col>
+        <ion-col size="4" class="ion-text-end">
+            <ion-text class="name">7</ion-text><br>
+            <ion-text class="name">$99</ion-text>
+        </ion-col>
+    </ion-row>
+    <ion-row class="ion-padding-start ion-padding-end ion-padding-top">
+        <ion-col size="12">
+            <ion-button class="btn-continue" mode="md" expand="block" (click)="packages()">
+                Continue
+            </ion-button>
+        </ion-col>
+    </ion-row>
+
+</ion-content>

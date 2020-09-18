@@ -1,0 +1,92 @@
+ion-header {
+    ion-toolbar {
+        padding-left: 16px;
+    }
+    .line {
+        margin: 5px auto 0px auto;
+        width: 54px;
+        height: 4px;
+        border-radius: 4px;
+        background-color: #cccccc;
+    }
+    .title {
+        font-size: 18px;
+        font-family: 'fivo-medium';
+        color: var(--ion-black-light-color);
+        margin-bottom: 4px;
+    }
+    .count-label {
+        font-size: 12px;
+        color: var(--ion-black-light-2-color);
+        margin: 0px;
+        font-family: 'tofini_regular';
+        span {
+            color: var(--ion-black-light-color);
+        }
+    }
+}
+
+ion-content {
+    --padding-start: 16px;
+    ion-item {
+        padding-bottom: 8px;
+        border-bottom: 1px solid #dbdbdb;
+        margin-bottom: 7px;
+        ion-thumbnail {
+            width: 100px;
+            height: 83px;
+            img {
+                border-radius: 10px;
+            }
+        }
+        .salon-name {
+            font-size: 15px;
+            color: var(--ion-black-light-color);
+            font-family: "fivo-medium";
+            .distance {
+                ion-icon {
+                    margin-bottom: -1px;
+                    margin-right: 3px;
+                    color: var(--ion-black-light-color);
+                }
+                font-size: 12px;
+                margin-top: 5px;
+                font-family: 'tofini_regular';
+                color: var(--ion-black-light-color);
+            }
+        }
+        .salon-address {
+            font-size: 11px;
+            font-family: "fivo-regular";
+            margin: 0px;
+            line-height: 14px;
+            color: var;
+            color: var(--ion-black-light-2-color);
+        }
+        .salon-start {
+            font-size: 13px;
+            font-family: 'tofini_medium';
+            margin: 0px;
+            color: var(--ion-color-lightGray);
+        }
+        .salon-time {
+            color: var(--ion-color-orange);
+            margin-top: 6px;
+            font-family: 'tofini_regular';
+            font-size: 13px;
+        }
+        .btn-book {
+            text-transform: initial;
+            --border-radius: 7px;
+            --padding-start: 19px;
+            --padding-end: 16px;
+            font-size: 15px;
+            font-family: 'tofini_medium';
+            position: absolute;
+            bottom: 10px;
+            right: 16px;
+            margin: 0px;
+            --box-shadow: none;
+        }
+    }
+}

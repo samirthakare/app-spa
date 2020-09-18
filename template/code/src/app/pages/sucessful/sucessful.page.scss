@@ -1,0 +1,20 @@
+.btn-continue {
+    --color: var(--ion-color-white);
+    height: 44px;
+    /*    margin: 35px 8px 20px 8px; */
+    font-size: 15px;
+    --box-shadow: none;
+    font-family: "fivo-medium";
+    --background: var(--ion-color-gradiant);
+    text-transform: inherit;
+}
+
+.head {
+    font-size: 20px;
+    color: var(--ion-black-light-color);
+    font-family: 'fivo-regular';
+}
+
+ion-content {
+    position: fixed;
+}
